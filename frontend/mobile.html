@@ -5,16 +5,20 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Mobile Enquiry | FM STORE-STYLES</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+rel="stylesheet"
+href="style.css">
 
-<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
 
@@ -22,37 +26,73 @@
 
 <div id="app">
 
-<a href="index.html" class="back-link">← Back</a>
+<div class="page active">
 
-<div class="page-card">
+<div class="card">
 
-<h1>📱 Mobile Enquiry</h1>
+<button
+class="back-btn"
+onclick="location.href='index.html'">
 
-<p class="page-subtitle">
-Tell us what mobile you're looking for.
+<i data-lucide="arrow-left"></i>
+
+<span>Back</span>
+
+</button>
+
+<div style="text-align:center;margin-bottom:25px;">
+
+<img
+src="assets/logo.png"
+alt="FM STORE-STYLES"
+style="width:90px;margin-bottom:14px;">
+
+<h1 class="title">
+
+Mobile Enquiry
+
+</h1>
+
+<p class="subtitle">
+
+Tell us the mobile you're looking for and we'll help you find the perfect one.
+
 </p>
 
-<form id="mobileForm">
+</div>
+
+<form
+id="mobileForm">
 
 <div class="form-group">
 
-<label>Full Name</label>
+<label>
+
+Full Name
+
+</label>
 
 <input
 type="text"
 id="name"
-placeholder="Enter your name"
+class="form-control"
+placeholder="Enter your full name"
 required>
 
 </div>
 
 <div class="form-group">
 
-<label>Mobile Number</label>
+<label>
+
+Mobile Number
+
+</label>
 
 <input
 type="tel"
-id="phone"
+id="mobile"
+class="form-control"
 placeholder="10 Digit Mobile Number"
 maxlength="10"
 required>
@@ -61,23 +101,45 @@ required>
 
 <div class="form-group">
 
-<label>Brand</label>
+<label>
 
-<select id="brand">
+Brand
+
+</label>
+
+<select
+id="brand"
+class="form-control"
+required>
 
 <option value="">Select Brand</option>
 
 <option>Apple</option>
+
 <option>Samsung</option>
+
 <option>OnePlus</option>
-<option>Vivo</option>
-<option>Oppo</option>
-<option>Motorola</option>
+
 <option>Google Pixel</option>
+
+<option>Motorola</option>
+
 <option>Nothing</option>
-<option>iQOO</option>
-<option>Xiaomi</option>
+
+<option>Vivo</option>
+
+<option>OPPO</option>
+
 <option>Realme</option>
+
+<option>Xiaomi</option>
+
+<option>iQOO</option>
+
+<option>Poco</option>
+
+<option>Honor</option>
+
 <option>Other</option>
 
 </select>
@@ -85,35 +147,54 @@ required>
 </div>
 
 <div
-class="form-group"
-id="otherBrandBox"
+id="otherBrandGroup"
 style="display:none;">
 
-<label>Brand Name</label>
+<div class="form-group">
+
+<label>
+
+Other Brand
+
+</label>
 
 <input
 type="text"
 id="otherBrand"
+class="form-control"
 placeholder="Enter Brand Name">
 
 </div>
 
+</div>
+
 <div class="form-group">
 
-<label>Model</label>
+<label>
+
+Model
+
+</label>
 
 <input
 type="text"
 id="model"
-placeholder="Example : iPhone 16 Pro">
+class="form-control"
+placeholder="Example: iPhone 15 Pro">
 
 </div>
 
 <div class="form-group">
 
-<label>Condition</label>
+<label>
 
-<select id="condition">
+Condition
+
+</label>
+
+<select
+id="condition"
+class="form-control">
 
 <option>New</option>
 
@@ -127,17 +208,23 @@ placeholder="Example : iPhone 16 Pro">
 
 <div class="form-group">
 
-<label>Budget</label>
+<label>
 
-<select id="budget">
+Budget
+
+</label>
+
+<select
+id="budget"
+class="form-control">
 
 <option>Below ₹15,000</option>
 
-<option>₹15,000 - ₹25,000</option>
+<option>₹15,000 – ₹25,000</option>
 
-<option>₹25,000 - ₹40,000</option>
+<option>₹25,000 – ₹40,000</option>
 
-<option>₹40,000 - ₹60,000</option>
+<option>₹40,000 – ₹60,000</option>
 
 <option>Above ₹60,000</option>
 
@@ -145,11 +232,61 @@ placeholder="Example : iPhone 16 Pro">
 
 </div>
 
+<div class="form-group">
+
+<label>
+
+Preferred Color (Optional)
+
+</label>
+
+<input
+type="text"
+id="color"
+class="form-control"
+placeholder="Example: Black">
+
+</div>
+<div class="form-group">
+
+<label>
+
+RAM / Storage (Optional)
+
+</label>
+
+<input
+type="text"
+id="storage"
+class="form-control"
+placeholder="Example: 8GB / 256GB">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Additional Requirements
+
+</label>
+
+<textarea
+id="notes"
+class="form-control"
+placeholder="Mention colour, battery, exchange, EMI or any special requirement..."></textarea>
+
+</div>
+
 <button
 type="submit"
-class="gold-btn">
+class="btn">
 
-🔍 Find My Mobile
+<i data-lucide="search"></i>
+
+&nbsp;
+
+Find My Mobile
 
 </button>
 
@@ -159,18 +296,22 @@ class="gold-btn">
 
 </div>
 
+</div>
+
+<script src="script.js"></script>
+
 <script>
 
-const brand=document.getElementById("brand");
+lucide.createIcons();
 
-const other=document.getElementById("otherBrandBox");
+document
+.getElementById("brand")
+.addEventListener("change",function(){
 
-brand.addEventListener("change",function(){
-
-other.style.display=
+document.getElementById("otherBrandGroup").style.display =
 this.value==="Other"
-?"block"
-:"none";
+? "block"
+: "none";
 
 });
 
@@ -180,7 +321,17 @@ document
 
 e.preventDefault();
 
-alert("Mobile enquiry submitted successfully.");
+const btn=this.querySelector(".btn");
+
+btn.disabled=true;
+
+btn.innerHTML="Submitting...";
+
+setTimeout(()=>{
+
+window.location.href="thankyou.html";
+
+},800);
 
 });
 
