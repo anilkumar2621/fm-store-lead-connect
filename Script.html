@@ -1,0 +1,109 @@
+<script>
+
+let currentPage = "home";
+
+function hidePages(){
+
+    const pages=[
+        "homePage",
+        "mobilePage",
+        "clothingPage",
+        "repairPage",
+        "thankyouPage"
+    ];
+
+    pages.forEach(function(page){
+
+        const el=document.getElementById(page);
+
+        if(el){
+            el.style.display="none";
+        }
+
+    });
+
+}
+
+function showPage(page){
+
+    hidePages();
+
+    currentPage=page;
+
+    const current=document.getElementById(page+"Page");
+
+    if(current){
+        current.style.display="block";
+    }
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+function toggleOtherBrand(){
+
+    const brand=document.getElementById("brand").value;
+
+    const other=document.getElementById("otherBrandGroup");
+
+    if(brand==="Other"){
+
+        other.style.display="block";
+
+    }else{
+
+        other.style.display="none";
+        document.getElementById("otherBrand").value="";
+
+    }
+
+}
+
+function toggleOtherClothing(){
+
+    const category=document.getElementById("clothCategory").value;
+
+    const other=document.getElementById("otherClothingGroup");
+
+    if(category==="Other"){
+
+        other.style.display="block";
+
+    }else{
+
+        other.style.display="none";
+        document.getElementById("otherClothing").value="";
+
+    }
+
+}
+
+function toggleOtherColor(){
+
+    const color=document.getElementById("clothColor").value;
+
+    const other=document.getElementById("otherColorGroup");
+
+    if(color==="Other"){
+
+        other.style.display="block";
+
+    }else{
+
+        other.style.display="none";
+        document.getElementById("otherColor").value="";
+
+    }
+
+}
+
+window.onload=function(){
+
+    showPage("home");
+
+}
+
+</script>
