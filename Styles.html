@@ -1,0 +1,633 @@
+<style>
+
+/*==================================================
+ FM STORE-STYLES UI v3
+ Part 1 - Foundation
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html{
+
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#111111;
+
+    color:#ffffff;
+
+    width:100%;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+/*==============================
+ APP
+==============================*/
+
+#app{
+
+    width:100%;
+
+    max-width:520px;
+
+    margin:0 auto;
+
+}
+
+/*==============================
+ PAGES
+==============================*/
+
+.page{
+
+    display:none;
+
+    padding:14px;
+
+    animation:fadeIn .25s ease;
+
+}
+
+.page.active{
+
+    display:block;
+
+}
+
+/*==============================
+ CARD
+==============================*/
+
+.card{
+
+    background:#1b1b1b;
+
+    border:1px solid #2d2d2d;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/*==============================
+ LOGO
+==============================*/
+
+.logo{
+
+    text-align:center;
+
+    font-size:32px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+.logo span{
+
+    color:#D4AF37;
+
+}
+
+/*==============================
+ TITLES
+==============================*/
+
+.title{
+
+    text-align:center;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin-top:18px;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#bdbdbd;
+
+    line-height:24px;
+
+    font-size:15px;
+
+}
+
+.section-title{
+
+    margin-top:28px;
+
+    margin-bottom:14px;
+
+    color:#D4AF37;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+/*==============================
+ LINKS
+==============================*/
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/*==============================
+ ANIMATION
+==============================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+ FM STORE-STYLES UI v3
+ Part 2 - Cards & Buttons
+==================================================*/
+
+/*==============================
+ SERVICE CARDS
+==============================*/
+
+.category-card{
+
+    position:relative;
+
+    background:#242424;
+
+    border:1px solid #333333;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:16px;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+
+}
+
+.category-card:hover{
+
+    border-color:#D4AF37;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 24px rgba(0,0,0,.30);
+
+}
+
+.category-card:active{
+
+    transform:scale(.98);
+
+}
+
+.category-card::after{
+
+    content:"›";
+
+    position:absolute;
+
+    right:20px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#D4AF37;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+.category-icon{
+
+    font-size:36px;
+
+    margin-bottom:10px;
+
+}
+
+.category-title{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+.category-desc{
+
+    color:#BDBDBD;
+
+    font-size:14px;
+
+    line-height:22px;
+
+}
+
+/*==============================
+ BUTTONS
+==============================*/
+
+.btn{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#D4AF37;
+
+    color:#111111;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.btn:hover{
+
+    background:#e3bb41;
+
+}
+
+.btn:active{
+
+    transform:scale(.98);
+
+}
+
+/*==============================
+ BACK BUTTON
+==============================*/
+
+.back-btn{
+
+    background:none;
+
+    border:none;
+
+    color:#D4AF37;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    margin-bottom:14px;
+
+}
+
+/*==============================
+ STORE BUTTONS
+==============================*/
+
+.store-btn{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#242424;
+
+    border:1px solid #333333;
+
+    border-radius:18px;
+
+    color:#ffffff;
+
+    padding:18px;
+
+    margin-bottom:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.store-btn:hover{
+
+    border-color:#D4AF37;
+
+}
+
+.store-btn .arrow{
+
+    color:#D4AF37;
+
+    font-size:22px;
+
+}
+
+/*==============================
+ CONTACT BUTTONS
+==============================*/
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+}
+
+.contact-btn{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#242424;
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.contact-btn:hover{
+
+    background:#303030;
+
+}
+/*==================================================
+ FM STORE-STYLES UI v3
+ Part 3 - Forms
+==================================================*/
+
+/*==============================
+ FORM
+==============================*/
+
+.form-group{
+
+    margin-bottom:18px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#ffffff;
+
+}
+
+/*==============================
+ INPUTS
+==============================*/
+
+.form-control,
+input,
+select,
+textarea{
+
+    width:100%;
+
+    display:block;
+
+    background:#262626;
+
+    color:#ffffff;
+
+    border:1px solid #444444;
+
+    border-radius:14px;
+
+    padding:14px 16px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.25s;
+
+    font-family:inherit;
+
+}
+
+/*==============================
+ TEXTAREA
+==============================*/
+
+textarea{
+
+    min-height:120px;
+
+    resize:vertical;
+
+}
+
+/*==============================
+ PLACEHOLDER
+==============================*/
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#8e8e8e;
+
+}
+
+/*==============================
+ FOCUS
+==============================*/
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:#D4AF37;
+
+    box-shadow:0 0 0 3px rgba(212,175,55,.18);
+
+}
+
+/*==============================
+ DROPDOWN
+==============================*/
+
+select{
+
+    cursor:pointer;
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    -moz-appearance:none;
+
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23D4AF37' viewBox='0 0 16 16'%3E%3Cpath d='M3.204 5h9.592L8 10.481 3.204 5z'/%3E%3C/svg%3E");
+
+    background-repeat:no-repeat;
+
+    background-position:right 16px center;
+
+    background-size:18px;
+
+    padding-right:50px;
+
+}
+
+/*==============================
+ OPTIONS
+==============================*/
+
+option{
+
+    background:#262626;
+
+    color:#ffffff;
+
+}
+
+/*==============================
+ REMOVE BLUE HIGHLIGHT
+==============================*/
+
+input,
+select,
+textarea,
+button{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+/*==============================
+ OTHER FIELD
+==============================*/
+
+#otherBrandGroup,
+#otherClothingGroup,
+#otherColorGroup{
+
+    animation:fadeIn .25s ease;
+
+}
+
+/*==============================
+ SUCCESS PAGE
+==============================*/
+
+.success-icon{
+
+    font-size:60px;
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+}
+
+.success-title{
+
+    text-align:center;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.success-text{
+
+    text-align:center;
+
+    color:#BDBDBD;
+
+    line-height:26px;
+
+}
+</style>
