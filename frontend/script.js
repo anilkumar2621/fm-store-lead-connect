@@ -1,24 +1,41 @@
-/*====================================
-FM STORE Lead Connect v5
-script.js
-====================================*/
+// =====================================
+// FM STORE-STYLES
+// Frontend Script
+// =====================================
 
-document.addEventListener("DOMContentLoaded", () => {
+// Google Apps Script Web App URL
+const WEB_APP_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
 
-    const mobile = document.getElementById("mobileCard");
-    const clothing = document.getElementById("clothingCard");
-    const repair = document.getElementById("repairCard");
+// Store Locations
+const STORE_LOCATIONS = [
+  {
+    name: "FM STORE-STYLES",
+    address: "Eturnagaram",
+    phone: "8463949455"
+  },
+  {
+    name: "FM STORE-STYLES",
+    address: "Mulugu",
+    phone: "8463949455"
+  }
+];
 
-    mobile.addEventListener("click", () => {
-        window.location.href = "mobile.html";
-    });
+// Helpers
+const $ = (id) => document.getElementById(id);
 
-    clothing.addEventListener("click", () => {
-        window.location.href = "clothing.html";
-    });
+function showPage(id) {
+  document.querySelectorAll(".page").forEach(page => {
+    page.classList.remove("active");
+  });
 
-    repair.addEventListener("click", () => {
-        window.location.href = "repair.html";
-    });
+  $(id).classList.add("active");
 
-});
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+function goBack() {
+  history.back();
+}
