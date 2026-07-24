@@ -1,0 +1,131 @@
+<div id="mobilePage" class="page">
+
+    <div class="card">
+
+        <button class="back-btn" onclick="showPage('home')">← Back</button>
+
+        <div class="title">📱 Mobile Enquiry</div>
+
+        <div class="subtitle">
+            Tell us what mobile you're looking for.
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input
+                type="text"
+                class="form-control"
+                id="mobileName"
+                placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input
+                type="tel"
+                class="form-control"
+                id="mobilePhone"
+                placeholder="10 Digit Mobile Number">
+        </div>
+
+        <div class="form-group">
+
+            <label>Brand</label>
+
+            <select
+                class="form-control"
+                id="brand"
+                onchange="toggleOtherBrand()">
+
+                <option value="">Select Brand</option>
+
+                <option>Apple</option>
+                <option>Samsung</option>
+                <option>OnePlus</option>
+                <option>Vivo</option>
+                <option>Oppo</option>
+                <option>Motorola</option>
+                <option>Google Pixel</option>
+                <option>Nothing</option>
+                <option>Xiaomi</option>
+                <option>Realme</option>
+                <option>Other</option>
+
+            </select>
+
+        </div>
+
+        <div
+            class="form-group"
+            id="otherBrandGroup"
+            style="display:none;">
+
+            <label>Brand Name</label>
+
+            <input
+                type="text"
+                class="form-control"
+                id="otherBrand"
+                placeholder="Enter Brand Name">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Model</label>
+
+            <input
+                type="text"
+                class="form-control"
+                id="model"
+                placeholder="Example : iPhone 15 Pro">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Condition</label>
+
+            <select
+                class="form-control"
+                id="condition">
+
+                <option>New</option>
+                <option>Pre-Owned</option>
+                <option>Either</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Budget</label>
+
+            <select
+                class="form-control"
+                id="budget">
+
+                <option>Below ₹15,000</option>
+                <option>₹15,000 - ₹25,000</option>
+                <option>₹25,000 - ₹40,000</option>
+                <option>₹40,000 - ₹60,000</option>
+                <option>Above ₹60,000</option>
+
+            </select>
+
+        </div>
+
+        <button
+            class="btn"
+            onclick="showPage('thankyou')">
+
+            🔍 Find My Mobile
+
+        </button>
+
+    </div>
+
+</div>
