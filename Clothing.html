@@ -1,0 +1,174 @@
+<div id="clothingPage" class="page">
+
+    <div class="card">
+
+        <button class="back-btn" onclick="showPage('home')">← Back</button>
+
+        <div class="title">👕 Clothing Enquiry</div>
+
+        <div class="subtitle">
+            Tell us what you're looking for.
+        </div>
+
+        <br>
+
+        <!-- Full Name -->
+        <div class="form-group">
+
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                class="form-control"
+                id="clothName"
+                placeholder="Enter your name">
+
+        </div>
+
+        <!-- Mobile Number -->
+        <div class="form-group">
+
+            <label>Mobile Number</label>
+
+            <input
+                type="tel"
+                class="form-control"
+                id="clothPhone"
+                placeholder="10 Digit Mobile Number">
+
+        </div>
+
+        <!-- Category -->
+        <div class="form-group">
+
+            <label>Category</label>
+
+            <select
+                class="form-control"
+                id="clothCategory"
+                onchange="toggleOtherClothing()">
+
+                <option value="">Select Category</option>
+
+                <option value="T-Shirt">T-Shirt</option>
+                <option value="Shirt">Shirt</option>
+                <option value="Jeans">Jeans</option>
+                <option value="Trousers">Trousers</option>
+                <option value="Shorts">Shorts</option>
+                <option value="Other">Other</option>
+
+            </select>
+
+        </div>
+
+        <!-- Other Category -->
+
+        <div
+            class="form-group"
+            id="otherClothingGroup"
+            style="display:none;">
+
+            <label>What are you looking for?</label>
+
+            <input
+                type="text"
+                class="form-control"
+                id="otherClothing"
+                placeholder="Example: Hoodie, Kurta, Cargo Pants">
+
+        </div>
+
+        <!-- Preferred Color -->
+
+        <div class="form-group">
+
+            <label>Preferred Color</label>
+
+            <select
+                class="form-control"
+                id="clothColor"
+                onchange="toggleOtherColor()">
+
+                <option value="">Select Color</option>
+
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Grey">Grey</option>
+                <option value="Brown">Brown</option>
+                <option value="Beige">Beige</option>
+                <option value="Any Color">Any Color</option>
+                <option value="Other">Other</option>
+
+            </select>
+
+        </div>
+
+        <!-- Other Color -->
+
+        <div
+            class="form-group"
+            id="otherColorGroup"
+            style="display:none;">
+
+            <label>Enter Color</label>
+
+            <input
+                type="text"
+                class="form-control"
+                id="otherColor"
+                placeholder="Enter Preferred Color">
+
+        </div>
+
+        <!-- Occasion -->
+
+        <div class="form-group">
+
+            <label>Occasion</label>
+
+            <select
+                class="form-control"
+                id="clothOccasion">
+
+                <option value="">Select Occasion</option>
+
+                <option>Casual</option>
+                <option>Formal</option>
+                <option>Party Wear</option>
+                <option>Office Wear</option>
+                <option>Daily Wear</option>
+                <option>Any</option>
+
+            </select>
+
+        </div>
+
+        <!-- Notes -->
+
+        <div class="form-group">
+
+            <label>Anything Else (Optional)</label>
+
+            <textarea
+                class="form-control"
+                id="clothNotes"
+                rows="4"
+                placeholder="Example: Oversized fit, Regular fit, Loose fit, Cotton material..."></textarea>
+
+        </div>
+
+        <!-- Button -->
+
+        <button
+            class="btn"
+            onclick="showPage('thankyou')">
+
+            📩 Send Enquiry
+
+        </button>
+
+    </div>
+
+</div>
