@@ -1,1 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Clothing Enquiry | FM STORE-STYLES</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="style.css">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+<div id="app">
+
+<div class="page active">
+
+<div class="card">
+
+<button
+class="back-btn"
+onclick="location.href='index.html'">
+
+<i data-lucide="arrow-left"></i>
+
+<span>Back</span>
+
+</button>
+
+<div style="text-align:center;margin-bottom:25px;">
+
+<img
+src="assets/logo.png"
+alt="FM STORE-STYLES"
+style="width:90px;margin-bottom:14px;">
+
+<h1 class="title">
+
+Clothing Enquiry
+
+</h1>
+
+<p class="subtitle">
+
+Tell us what you're looking for and we'll help you find it.
+
+</p>
+
+</div>
+
+<form
+id="clothingForm">
+
+<div class="form-group">
+
+<label>
+
+Full Name
+
+</label>
+
+<input
+type="text"
+id="name"
+class="form-control"
+placeholder="Enter your full name"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Mobile Number
+
+</label>
+
+<input
+type="tel"
+id="mobile"
+class="form-control"
+placeholder="10 Digit Mobile Number"
+maxlength="10"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Category
+
+</label>
+
+<select
+id="category"
+class="form-control"
+required>
+
+<option value="">Select Category</option>
+
+<option>Shirts</option>
+
+<option>T-Shirts</option>
+
+<option>Jeans</option>
+
+<option>Trousers</option>
+
+<option>Shorts</option>
+
+<option>Cargo Pants</option>
+
+<option>Track Pants</option>
+
+<option>Shoes</option>
+
+<option>Watches</option>
+
+<option>Caps</option>
+
+<option>Belts</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div
+id="otherCategoryGroup"
+style="display:none;">
+
+<div class="form-group">
+
+<label>
+
+Other Category
+
+</label>
+
+<input
+type="text"
+id="otherCategory"
+class="form-control"
+placeholder="Enter Category">
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Preferred Color
+
+</label>
+
+<input
+type="text"
+id="color"
+class="form-control"
+placeholder="Example: Black, White, Blue">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Occasion
+
+</label>
+
+<select
+id="occasion"
+class="form-control">
+
+<option>Daily Wear</option>
+
+<option>Office</option>
+
+<option>Party</option>
+
+<option>Wedding</option>
+
+<option>Festival</option>
+
+<option>Gift</option>
+
+</select>
+
+</div>
+<div class="form-group">
+
+<label>
+
+Additional Requirements
+
+</label>
+
+<textarea
+id="notes"
+class="form-control"
+placeholder="Mention size, brand, style or any special requirement..."></textarea>
+
+</div>
+
+<button
+type="submit"
+class="btn">
+
+<i data-lucide="shirt"></i>
+
+&nbsp;
+
+Send Enquiry
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+lucide.createIcons();
+
+const category=document.getElementById("category");
+
+const otherGroup=document.getElementById("otherCategoryGroup");
+
+category.addEventListener("change",function(){
+
+if(this.value==="Other"){
+
+otherGroup.style.display="block";
+
+}else{
+
+otherGroup.style.display="none";
+
+document.getElementById("otherCategory").value="";
+
+}
+
+});
+
+document
+.getElementById("clothingForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const btn=this.querySelector(".btn");
+
+btn.disabled=true;
+
+btn.innerHTML="Submitting...";
+
+setTimeout(function(){
+
+window.location.href="thankyou.html";
+
+},800);
+
+});
+
+</script>
+
+</body>
+
+</html>
