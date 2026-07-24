@@ -1,61 +1,153 @@
-/* ===========================
-   FM STORE Lead Connect v5
-=========================== */
+/*==================================================
+FM STORE Lead Connect v5
+Design System
+Part 1 / 4
+==================================================*/
 
-:root{
-
-    --bg:#111111;
-    --card:#1d1d1d;
-    --card2:#262626;
-    --gold:#D4AF37;
-    --text:#ffffff;
-    --muted:#bdbdbd;
-    --border:#333;
-
-}
+/*==============================
+RESET
+==============================*/
 
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
 
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
 }
 
 body{
-
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Poppins',sans-serif;
+    font-family:"Poppins",sans-serif;
+    background:#0F0F10;
+    color:#FFFFFF;
     min-height:100vh;
+    overflow-x:hidden;
+}
+
+/*==============================
+THEME
+==============================*/
+
+:root{
+
+    --bg:#0F0F10;
+
+    --card:#1B1B1D;
+
+    --card-hover:#222225;
+
+    --gold:#D4AF37;
+
+    --gold-light:#F2D77A;
+
+    --white:#FFFFFF;
+
+    --grey:#A5A5A5;
+
+    --border:#2D2D30;
+
+    --success:#22C55E;
+
+    --danger:#EF4444;
+
+    --radius:22px;
+
+    --transition:.30s ease;
+
+    --shadow:0 12px 35px rgba(0,0,0,.35);
 
 }
+
+/*==============================
+LAYOUT
+==============================*/
 
 #app{
 
     width:100%;
+
     max-width:520px;
+
     margin:auto;
-    padding:18px;
+
+    padding:20px;
 
 }
+
+.container{
+
+    width:100%;
+
+}
+
+.page{
+
+    animation:fadeIn .35s ease;
+
+}
+
+/*==============================
+TYPOGRAPHY
+==============================*/
+
+h1{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+}
+
+h2{
+
+    font-size:26px;
+
+    font-weight:700;
+
+}
+
+h3{
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+p{
+
+    color:var(--grey);
+
+    line-height:1.7;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/*==============================
+HERO
+==============================*/
 
 .hero{
 
     text-align:center;
-    margin-top:25px;
-    margin-bottom:35px;
+
+    padding:30px 10px;
 
 }
 
-.hero h1{
-
-    font-size:34px;
-    font-weight:800;
-
-}
-
-.hero span{
+.hero h1 span{
 
     color:var(--gold);
 
@@ -63,11 +155,33 @@ body{
 
 .hero p{
 
-    color:var(--muted);
-    margin-top:10px;
-    line-height:24px;
+    margin-top:14px;
+
+    font-size:15px;
 
 }
+
+/*==============================
+CARD
+==============================*/
+
+.card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/*==============================
+SERVICE CARD
+==============================*/
 
 .service-card{
 
@@ -83,7 +197,7 @@ body{
 
     cursor:pointer;
 
-    transition:.25s;
+    transition:var(--transition);
 
 }
 
@@ -93,40 +207,33 @@ body{
 
     border-color:var(--gold);
 
+    background:var(--card-hover);
+
 }
 
-.icon{
+.service-card:active{
+
+    transform:scale(.98);
+
+}
+
+.service-card .icon{
 
     font-size:42px;
-    margin-bottom:12px;
+
+    margin-bottom:14px;
 
 }
 
 .service-card h2{
 
-    font-size:22px;
+    margin-bottom:8px;
 
 }
 
-.service-card p{
-
-    margin-top:8px;
-    color:var(--muted);
-
-}
-
-.stores{
-
-    margin-top:40px;
-
-}
-
-.stores h3{
-
-    margin-bottom:18px;
-    color:var(--gold);
-
-}
+/*==============================
+STORE BUTTON
+==============================*/
 
 .store-btn{
 
@@ -136,21 +243,17 @@ body{
 
     align-items:center;
 
-    padding:18px;
-
     background:var(--card);
 
     border:1px solid var(--border);
 
     border-radius:18px;
 
-    color:white;
+    padding:18px;
 
-    text-decoration:none;
+    margin-top:15px;
 
-    margin-bottom:15px;
-
-    transition:.25s;
+    transition:var(--transition);
 
 }
 
@@ -158,7 +261,13 @@ body{
 
     border-color:var(--gold);
 
+    background:var(--card-hover);
+
 }
+
+/*==============================
+CONTACT BUTTONS
+==============================*/
 
 .contact{
 
@@ -168,18 +277,16 @@ body{
 
     gap:15px;
 
-    margin-top:35px;
+    margin-top:30px;
 
 }
 
 .call-btn,
 .whatsapp-btn{
 
-    text-decoration:none;
+    background:var(--gold);
 
     color:#111;
-
-    background:var(--gold);
 
     text-align:center;
 
@@ -189,20 +296,857 @@ body{
 
     font-weight:700;
 
-}
-
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:30px;
+    transition:var(--transition);
 
 }
 
-.contact{
+.call-btn:hover,
+.whatsapp-btn:hover{
 
-grid-template-columns:1fr;
+    transform:translateY(-2px);
 
 }
+
+/*==============================
+ANIMATION
+==============================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==================================================
+FM STORE Lead Connect v5
+Design System
+Part 2 / 4
+Forms & Buttons
+==================================================*/
+
+/*==============================
+PAGE CARD
+==============================*/
+
+.page-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:26px;
+
+    padding:28px;
+
+    box-shadow:var(--shadow);
+
+    margin-top:15px;
+
+}
+
+/*==============================
+BACK LINK
+==============================*/
+
+.back-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-bottom:20px;
+
+    color:var(--gold);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.back-link:hover{
+
+    color:var(--gold-light);
+
+}
+
+/*==============================
+PAGE TITLE
+==============================*/
+
+.page-card h1{
+
+    text-align:center;
+
+    margin-bottom:8px;
+
+}
+
+.page-subtitle{
+
+    text-align:center;
+
+    margin-bottom:28px;
+
+}
+
+/*==============================
+FORM
+==============================*/
+
+form{
+
+    width:100%;
+
+}
+
+.form-group{
+
+    margin-bottom:22px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--gold);
+
+}
+
+/*==============================
+INPUTS
+==============================*/
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border-radius:16px;
+
+    border:1px solid var(--border);
+
+    background:#252527;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-family:inherit;
+
+    outline:none;
+
+    transition:var(--transition);
+
+}
+
+/*==============================
+PLACEHOLDER
+==============================*/
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#8F8F8F;
+
+}
+
+/*==============================
+TEXTAREA
+==============================*/
+
+textarea{
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+/*==============================
+FOCUS
+==============================*/
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:var(--gold);
+
+    box-shadow:0 0 0 4px rgba(212,175,55,.18);
+
+}
+
+/*==============================
+NATIVE DROPDOWNS
+==============================*/
+
+select{
+
+    appearance:auto;
+
+    -webkit-appearance:menulist;
+
+    -moz-appearance:auto;
+
+    cursor:pointer;
+
+    background-color:#252527;
+
+}
+
+/*==============================
+OPTIONS
+==============================*/
+
+option{
+
+    background:#252527;
+
+    color:#ffffff;
+
+}
+
+/*==============================
+BUTTONS
+==============================*/
+
+.gold-btn{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    background:var(--gold);
+
+    color:#111;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.gold-btn:hover{
+
+    background:var(--gold-light);
+
+    transform:translateY(-2px);
+
+}
+
+.gold-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/*==============================
+SECONDARY BUTTON
+==============================*/
+
+.secondary-btn{
+
+    width:100%;
+
+    border:1px solid var(--border);
+
+    background:transparent;
+
+    color:#fff;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.secondary-btn:hover{
+
+    border-color:var(--gold);
+
+}
+
+/*==============================
+DISABLED BUTTON
+==============================*/
+
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+/*==============================
+ERROR MESSAGE
+==============================*/
+
+.error{
+
+    color:var(--danger);
+
+    font-size:13px;
+
+    margin-top:6px;
+
+}
+
+/*==============================
+SUCCESS MESSAGE
+==============================*/
+
+.success{
+
+    color:var(--success);
+
+    font-size:13px;
+
+    margin-top:6px;
+
+}
+
+/*==============================
+REMOVE TAP HIGHLIGHT
+==============================*/
+
+button,
+a,
+input,
+select,
+textarea{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+/*==================================================
+FM STORE Lead Connect v5
+Design System
+Part 3 / 4
+Animations & Utilities
+==================================================*/
+
+/*==============================
+LOADING
+==============================*/
+
+.loader{
+
+    width:48px;
+
+    height:48px;
+
+    border:4px solid rgba(255,255,255,.12);
+
+    border-top:4px solid var(--gold);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin:auto;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*==============================
+SUCCESS CARD
+==============================*/
+
+.success-card{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+.success-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:rgba(34,197,94,.15);
+
+    color:var(--success);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:42px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+.success-card h2{
+
+    margin-bottom:12px;
+
+}
+
+.success-card p{
+
+    max-width:320px;
+
+    margin:auto;
+
+}
+
+/*==============================
+TOAST
+==============================*/
+
+.toast{
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#1B1B1D;
+
+    color:#fff;
+
+    padding:16px 24px;
+
+    border-radius:14px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.35s;
+
+    z-index:9999;
+
+}
+
+.toast.show{
+
+    opacity:1;
+
+    bottom:40px;
+
+}
+
+/*==============================
+BADGES
+==============================*/
+
+.badge{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:50px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    background:rgba(212,175,55,.15);
+
+    color:var(--gold);
+
+}
+
+/*==============================
+DIVIDER
+==============================*/
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--border);
+
+    margin:28px 0;
+
+}
+
+/*==============================
+UTILITY CLASSES
+==============================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-gold{
+
+    color:var(--gold);
+
+}
+
+.text-grey{
+
+    color:var(--grey);
+
+}
+
+.mt-10{margin-top:10px;}
+
+.mt-20{margin-top:20px;}
+
+.mt-30{margin-top:30px;}
+
+.mb-10{margin-bottom:10px;}
+
+.mb-20{margin-bottom:20px;}
+
+.mb-30{margin-bottom:30px;}
+
+.hidden{
+
+    display:none;
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.space-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/*==============================
+IMAGE
+==============================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+/*==================================================
+FM STORE Lead Connect v5
+Design System
+Part 4 / 4
+Responsive & Final Polish
+==================================================*/
+
+/*==============================
+RESPONSIVE - MOBILE
+==============================*/
+
+@media (max-width:768px){
+
+    #app{
+
+        max-width:100%;
+
+        padding:16px;
+
+    }
+
+    .hero{
+
+        padding:20px 10px;
+
+    }
+
+    .hero h1{
+
+        font-size:30px;
+
+    }
+
+    .hero p{
+
+        font-size:14px;
+
+    }
+
+    .page-card{
+
+        padding:22px;
+
+        border-radius:22px;
+
+    }
+
+    .card{
+
+        padding:20px;
+
+    }
+
+    .service-card{
+
+        padding:18px;
+
+    }
+
+    .service-card h2{
+
+        font-size:20px;
+
+    }
+
+    .service-card .icon{
+
+        font-size:36px;
+
+    }
+
+    .contact{
+
+        grid-template-columns:1fr;
+
+    }
+
+    input,
+    select,
+    textarea{
+
+        font-size:16px;
+
+    }
+
+}
+
+/*==============================
+RESPONSIVE - TABLET
+==============================*/
+
+@media (min-width:769px) and (max-width:1024px){
+
+    #app{
+
+        max-width:720px;
+
+    }
+
+}
+
+/*==============================
+RESPONSIVE - DESKTOP
+==============================*/
+
+@media (min-width:1025px){
+
+    body{
+
+        display:flex;
+
+        justify-content:center;
+
+        padding:40px;
+
+    }
+
+    #app{
+
+        max-width:900px;
+
+    }
+
+    .services{
+
+        display:grid;
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:20px;
+
+    }
+
+    .contact{
+
+        max-width:500px;
+
+        margin:40px auto 0;
+
+    }
+
+}
+
+/*==============================
+SCROLLBAR
+==============================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#333;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--gold);
+
+}
+
+/*==============================
+SELECTION
+==============================*/
+
+::selection{
+
+    background:var(--gold);
+
+    color:#111;
+
+}
+
+/*==============================
+SMOOTH TRANSITIONS
+==============================*/
+
+*{
+
+    transition:
+    background .25s ease,
+    border-color .25s ease,
+    color .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
+
+}
+
+/*==============================
+REMOVE DEFAULT STYLES
+==============================*/
+
+button{
+
+    font-family:inherit;
+
+}
+
+input,
+select,
+textarea,
+button{
+
+    border:none;
+
+    outline:none;
+
+}
+
+/*==============================
+FINAL TOUCH
+==============================*/
+
+html,
+body{
+
+    margin:0;
+
+    padding:0;
+
+}
+
+body{
+
+    background:linear-gradient(
+        180deg,
+        #0f0f10 0%,
+        #151515 100%
+    );
 
 }
