@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mobile Enquiry | FM STORE-STYLES</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="app">
+
+<a href="index.html" class="back-link">← Back</a>
+
+<div class="page-card">
+
+<h1>📱 Mobile Enquiry</h1>
+
+<p class="page-subtitle">
+Tell us what mobile you're looking for.
+</p>
+
+<form id="mobileForm">
+
+<div class="form-group">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Mobile Number</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="10 Digit Mobile Number"
+maxlength="10"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Brand</label>
+
+<select id="brand">
+
+<option value="">Select Brand</option>
+
+<option>Apple</option>
+<option>Samsung</option>
+<option>OnePlus</option>
+<option>Vivo</option>
+<option>Oppo</option>
+<option>Motorola</option>
+<option>Google Pixel</option>
+<option>Nothing</option>
+<option>iQOO</option>
+<option>Xiaomi</option>
+<option>Realme</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div
+class="form-group"
+id="otherBrandBox"
+style="display:none;">
+
+<label>Brand Name</label>
+
+<input
+type="text"
+id="otherBrand"
+placeholder="Enter Brand Name">
+
+</div>
+
+<div class="form-group">
+
+<label>Model</label>
+
+<input
+type="text"
+id="model"
+placeholder="Example : iPhone 16 Pro">
+
+</div>
+
+<div class="form-group">
+
+<label>Condition</label>
+
+<select id="condition">
+
+<option>New</option>
+
+<option>Pre-Owned</option>
+
+<option>Either</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Budget</label>
+
+<select id="budget">
+
+<option>Below ₹15,000</option>
+
+<option>₹15,000 - ₹25,000</option>
+
+<option>₹25,000 - ₹40,000</option>
+
+<option>₹40,000 - ₹60,000</option>
+
+<option>Above ₹60,000</option>
+
+</select>
+
+</div>
+
+<button
+type="submit"
+class="gold-btn">
+
+🔍 Find My Mobile
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script>
+
+const brand=document.getElementById("brand");
+
+const other=document.getElementById("otherBrandBox");
+
+brand.addEventListener("change",function(){
+
+other.style.display=
+this.value==="Other"
+?"block"
+:"none";
+
+});
+
+document
+.getElementById("mobileForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Mobile enquiry submitted successfully.");
+
+});
+
+</script>
+
+</body>
+
+</html>
