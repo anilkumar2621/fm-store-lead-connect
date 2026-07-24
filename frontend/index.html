@@ -5,16 +5,38 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<title>FM STORE-STYLES Lead Connect</title>
+<title>FM STORE-STYLES</title>
 
-<link rel="stylesheet" href="style.css">
+<meta
+name="theme-color"
+content="#0F0F10">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta
+name="description"
+content="Premium Mobiles, Clothing, Accessories & Mobile Repair">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="style.css">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
 
@@ -22,100 +44,247 @@
 
 <div id="app">
 
-<header class="hero">
+<!-- =========================
+LOGO
+========================= -->
+
+<section class="hero">
+
+<img
+src="assets/logo.png"
+alt="FM STORE-STYLES Logo"
+class="logo">
 
 <h1>
+
 FM <span>STORE-STYLES</span>
+
 </h1>
 
 <p>
-Mobiles • Accessories • Service • Premium Men's Fashion
+
+Premium Mobiles • Fashion • Accessories • Service
+
 </p>
 
-</header>
+</section>
+
+<!-- =========================
+SERVICES
+========================= -->
 
 <section class="services">
 
-<div class="service-card" id="mobileCard">
+<div
+class="service-card"
+onclick="location.href='mobile.html'">
 
-<div class="icon">📱</div>
+<div class="icon">
 
-<h2>Mobiles</h2>
-
-<p>New & Pre-Owned Smartphones</p>
-
-</div>
-
-<div class="service-card" id="clothingCard">
-
-<div class="icon">👕</div>
-
-<h2>Clothing</h2>
-
-<p>Premium Men's Fashion</p>
+<i data-lucide="smartphone"></i>
 
 </div>
 
-<div class="service-card" id="repairCard">
+<h2>
 
-<div class="icon">🔧</div>
+Mobile Enquiry
 
-<h2>Mobile Repair</h2>
+</h2>
 
-<p>Fast & Trusted Service</p>
+<p>
+
+Find your perfect Smartphone.
+
+</p>
+
+</div>
+
+<div
+class="service-card"
+onclick="location.href='clothing.html'">
+
+<div class="icon">
+
+<i data-lucide="shirt"></i>
+
+</div>
+
+<h2>
+
+Clothing Enquiry
+
+</h2>
+
+<p>
+
+Premium Men's Fashion Collection.
+
+</p>
+
+</div>
+
+<div
+class="service-card"
+onclick="location.href='repair.html'">
+
+<div class="icon">
+
+<i data-lucide="wrench"></i>
+
+</div>
+
+<h2>
+
+Mobile Repair
+
+</h2>
+
+<p>
+
+Fast & Trusted Mobile Service.
+
+</p>
 
 </div>
 
 </section>
+<!-- =========================
+OUR STORES
+========================= -->
 
 <section class="stores">
 
-<h3>📍 Visit Our Stores</h3>
+<h3>
 
-<a class="store-btn"
+Visit Our Stores
+
+</h3>
+
+<a
+class="store-btn"
 href="https://maps.app.goo.gl/FHnvtrADsTJm1Pc86"
 target="_blank">
 
-🏬 FM STORE-STYLES
+<div class="store-left">
 
-<span>Open →</span>
+<i data-lucide="map-pin"></i>
+
+<div>
+
+<h4>FM STORE-STYLES</h4>
+
+<p>Main Branch</p>
+
+</div>
+
+</div>
+
+<i data-lucide="chevron-right"></i>
 
 </a>
 
-<a class="store-btn"
+<a
+class="store-btn"
 href="https://maps.app.goo.gl/LZS4LSyN3iqMJ125A"
 target="_blank">
 
-📱 Fayaz Mobiles
+<div class="store-left">
 
-<span>Open →</span>
+<i data-lucide="map-pin"></i>
+
+<div>
+
+<h4>Fayaz Mobiles</h4>
+
+<p>Mobile Store</p>
+
+</div>
+
+</div>
+
+<i data-lucide="chevron-right"></i>
 
 </a>
 
 </section>
+
+<!-- =========================
+CONTACT
+========================= -->
 
 <section class="contact">
 
-<a class="call-btn"
-href="tel:8463949455">
+<a
+href="tel:8463949455"
+class="call-btn">
 
-📞 Call Us
+<i data-lucide="phone-call"></i>
+
+<span>
+
+Call Now
+
+</span>
 
 </a>
 
-<a class="whatsapp-btn"
+<a
 href="https://wa.me/918463949455"
-target="_blank">
+target="_blank"
+class="whatsapp-btn">
 
-💬 WhatsApp
+<i data-lucide="message-circle"></i>
+
+<span>
+
+WhatsApp
+
+</span>
 
 </a>
 
 </section>
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer class="footer">
+
+<img
+src="assets/logo.png"
+alt="FM STORE Logo"
+class="footer-logo">
+
+<h3>
+
+FM STORE-STYLES
+
+</h3>
+
+<p>
+
+Premium Mobiles • Fashion • Accessories
+
+</p>
+
+<p class="copyright">
+
+© 2026 FM STORE-STYLES
+
+</p>
+
+</footer>
 
 </div>
 
 <script src="script.js"></script>
+
+<script>
+
+lucide.createIcons();
+
+</script>
 
 </body>
 
